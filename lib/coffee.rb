@@ -8,4 +8,10 @@ class Coffee
   def price
     1.00 + ingredients.length * 0.25
   end
+  def color
+    ingredients.include?(:milk) ? :light : :dark
+  end
+  def temperature
+    ingredients.include?(:milk) ? 190.0 : 205.0
+  end
 end
